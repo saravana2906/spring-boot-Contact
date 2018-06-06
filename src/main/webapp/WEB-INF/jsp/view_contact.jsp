@@ -13,7 +13,7 @@ function selectRow(x) {
 	    var con=x.getElementsByTagName('input')[0];
 	    console.log("Value of hidden :"+ con.getAttribute('value'));
 	    
-	    var con_id=document.getElementById('contactid');
+	    var con_id=document.getElementById('contactId');
 	    con_id.setAttribute('value',con.getAttribute('value'));
 	    console.log(con_id.getAttribute('value'));
 	  //  document.getElementById("edit_contact").submit();
@@ -25,7 +25,7 @@ function selectRow(x) {
 		var form=document.getElementById("multiform");
 		if(txt.indexOf("Update")>-1)
 			{
-			form.setAttribute('action','edit_contact');
+			form.setAttribute('action','show_contact');
 			form.submit();
 			}
 		else if(txt.indexOf("Delete")>-1)
@@ -43,6 +43,10 @@ function selectRow(x) {
 
 </script>
 <style>
+.error
+{
+color: red;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -75,11 +79,13 @@ font-color: blue;
 </head>
 <body>
 <div id="contents">
-<form  id="multiform">
-<input type="hidden" name="contactid" id="contactid" value="">
+<form  id="multiform" method="post">
+<input type="hidden" name="contactId" id="contactId" value="">
 </form>
 <button type="button" onclick="submitAction(this)" value="update">Update</button>
 <button type="button" onclick="submitAction(this)" value="delete">Delete</button>
+ <p class="error">${error}</p>
+  <div id="content">
 <table class="centered">
 <tr>
 <th>contact name</th>

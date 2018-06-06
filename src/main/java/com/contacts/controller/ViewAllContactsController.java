@@ -2,13 +2,16 @@ package com.contacts.controller;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 import com.contacts.entity.Contact;
 import com.contacts.entity.ContactPhone;
@@ -29,7 +32,7 @@ public class ViewAllContactsController {
 	HttpSession httpSession;
 	
 	@RequestMapping("/all_contacts")
-	public String viewContacts(Model theModel)
+	public String viewContacts(Model theModel,HttpServletRequest request)
 	{
 		List<Contact>  contactList=contactRepository.findByUserid((Long)httpSession.getAttribute("uid"));
 		List<ContactPhone> phList=contactPhoneRepository.findByUserid((Long)httpSession.getAttribute("uid"));
@@ -50,8 +53,17 @@ public class ViewAllContactsController {
 			contacts.put(ctemp.getContact().getContactId(),cw);
 		}
 		
-		theModel.addAttribute("clist", contacts);	
+		theModel.addAttribute("clist", contacts);
 		
+		Map<String, ?> inputFlashMap = RequestContextUtils.getInputFlashMap(request);
+		  if (inputFlashMap != null) {
+		    if(inputFlashMap.get("error")!=null);
+		    {
+		    	theModel.addAttribute("error",(String) inputFlashMap.get("error"));
+		    }
+		    // do the job
+		  }
+
 		
 		return "view_contact";
 	}

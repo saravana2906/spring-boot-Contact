@@ -38,7 +38,7 @@ public class ContactsManagementApplication implements CommandLineRunner  {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		//jdbcTemplate.query("select * from users",(rs,rownum)->new User(rs.getLong(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5))).forEach(u->log.info(u.toString()));
-		User user=new User();
+	/*	User user=new User();
 		user.setUsername("saravana");
 		user.setEmailid("sars@gmail.com");
 		user.setPassword("sars");
@@ -64,7 +64,7 @@ public class ContactsManagementApplication implements CommandLineRunner  {
 		test.setName("siva");
 		test.setUser(tuser);
 		log.info("Testing partiality");
-		test=contactRepository.save(test);
+		test=contactRepository.save(test);*/
 		
 		
 		
