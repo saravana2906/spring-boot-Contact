@@ -5,11 +5,11 @@ This Appication is built for learning Spring boot , Hibernate with Spring Data J
 
 It uses only three tables 
 
-User          - to manage login 
+User          - to manage login <br>
 Contact       - to Store User's contact information like name , Email id (Like Contacts in Phone) 
-              and it has unidirectional many to one mapping with User .
+              and it has unidirectional many to one mapping with User .<br>
 ContactPhone  - to Store Phone numbers(yes! can store more phone number for each contcat) information for 
-               each contact and it has unidirectional many to one mapping with Contact
+               each contact and it has unidirectional many to one mapping with Contact<br.
                
 As part of Spring MVC , this application implements
     - Request Mapping using annotations and usage of Controller,Repository annotations
