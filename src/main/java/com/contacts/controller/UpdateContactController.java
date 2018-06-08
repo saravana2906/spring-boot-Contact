@@ -18,7 +18,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.contacts.entity.Contact;
 import com.contacts.entity.ContactPhone;
+import com.contacts.entity.User;
+import com.contacts.forms.AddContactForm;
 import com.contacts.forms.Multiform;
+import com.contacts.forms.UpdateContactForm;
 import com.contacts.repository.ContactPhoneRepository;
 import com.contacts.repository.ContactRepository;
 
@@ -55,5 +58,34 @@ public class UpdateContactController {
 		System.out.println(c.getContactId()+" "+c.getName());
 		return "edit_contact";
 	}
+	
+	@RequestMapping("/update_contact")
+	public String processForm(
+			@ModelAttribute("updateContact") UpdateContactForm updateContact,HttpSession session)
+	{
+		
+		System.out.println(updateContact.getContactid() +  updateContact.getEmailid() + updateContact.getName());
+		Contact c=new Contact();
+		c.setContactId(updateContact.getContactid());
+		c.setEmailId(updateContact.getEmailid());
+		c.setName(updateContact.getName());
+		User u=new User();
+		u.setUserid((Long)session.getAttribute("uid"));
+		c.setUser(u);
+		contactRepository.save(c);
+		if(updateContact.getPhonenumber()!=null)
+		{
+		for(String ph : updateContact.getPhonenumber())
+		{
+			ContactPhone cp =new ContactPhone();
+			cp.setPhoneNo(ph);
+			cp.setContact(c);
+			contactPhoneRepository.save(cp);
+		}
+		}
+		
+		return "redirect:/all_contacts";
+	}
+	
 
 }

@@ -68,7 +68,7 @@ function addRow()
 	}
 	function submitform()
 	{
-		var x=document.getElementById('update_contact');
+		var x=document.getElementById('updateContact');
 		var tab=document.getElementById('phonebook');
 		for(var i=1;i<tab.rows.length;i++)
 			{
@@ -76,6 +76,7 @@ function addRow()
 			console.log("iteration :"+i)
 			var inp1 = row.cells[0].getElementsByTagName('input')[0];
 			inp1.name="phonenumber["+(i-1)+"]";
+			inp1.id="phonenumber["+(i-1)+"]";
 			}
 			console.log("hi");
 		x.submit();
@@ -127,9 +128,9 @@ update_phone.submit();
 </script>
 </head>
 <body>
-
+<a style="float : right;" href="/logout">Logout</a>
 <form id="update_phone_form" method="post">
-<input type="hidden" name="contactid" value="${con.name}" />
+<input type="hidden" name="contactid" value="${con.contactId}" />
 <input type="hidden" name="phoneid" />
 <input type="hidden" name="phoneno" />
 </form>
@@ -139,14 +140,13 @@ update_phone.submit();
    <td><button type="button" onclick="deleteRow(this);return false;" value="-1">-1</button></td>
    </tr>
   </table>
-<form action="update_contact" id="update_contact">
+<form action="update_contact" id="updateContact" name="updateContact">
 <input type="hidden" name="contactid" value="${con.contactId}"> />
-<input type="hidden" name="contact.contactid" value="${con.contactId}" />
  <fieldset>
   <legend>Update Contact</legend>
   <div id="content">
-  Contact Name: <input type="text" name="contact.name" id="name" value="${con.name}" /><br>
-  Email id: <input type="text" name="contact.emailid" id="emailid" value="${con.emailId }"  /><br>
+  Contact Name: <input type="text" name="name" id="name" value="${con.name}" /><br>
+  Email id: <input type="text" name="emailid" id="emailid" value="${con.emailId }"  /><br>
   Phone No:
 <button onclick="updatephone(this);return false;" name="delete">delete</button> 
 <button onclick="updatephone(this);return false;" name="update">update</button>

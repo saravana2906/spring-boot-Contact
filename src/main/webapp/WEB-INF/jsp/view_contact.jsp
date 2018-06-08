@@ -78,6 +78,7 @@ font-color: blue;
 </style>
 </head>
 <body>
+<a style="float : right;" href="/logout">Logout</a>
 <div id="contents">
 <form  id="multiform" method="post">
 <input type="hidden" name="contactId" id="contactId" value="">
@@ -101,11 +102,11 @@ font-color: blue;
 <td rowspan= ${fn:length(con.value.phList)}> ${con.value.emailId}</td>
 <c:forEach items="${con.value.phList}" var="phone" varStatus="loop">
 
-<c:if test="${!loop.last}">
+<c:if test="${loop.first}">
 <td>${phone}</td>
 </tr>
 </c:if>
-<c:if test="${loop.last}">
+<c:if test="${!loop.first}">
 <tr>
 <td>${phone}</td>
 </tr>

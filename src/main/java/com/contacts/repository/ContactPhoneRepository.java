@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import com.contacts.entity.Contact;
 import com.contacts.entity.ContactPhone;
 
 @Repository
@@ -17,4 +18,6 @@ public interface ContactPhoneRepository extends CrudRepository<ContactPhone,Long
 	
 	@Query("select  cp from ContactPhone cp join cp.contact c where c.user.userid = :userid and c.contactId = :contactId ORDER BY cp.phoneID")
 	List<ContactPhone> findByUseridandContactId( @Param("userid") Long userid,  @Param("contactId") Long contactId);
+	
+	void deleteByContact(Contact contact);
 }

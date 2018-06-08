@@ -92,6 +92,7 @@ function addRow()
 </script>
 </head>
 <body>
+<a style="float : right;" href="/logout">Logout</a>
 <form action="process_addcontact" id="contactform" method="post">
  <fieldset>
   <legend>Add Contact</legend>
