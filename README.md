@@ -1,4 +1,4 @@
-# spring-boot-Contact
+# Spring-boot-Contact
 A Simple Contact management Application implemented using Spring Boot &amp; Spring Data JPA 
 
 This Appication is built for learning Spring boot , Hibernate with Spring Data JPA , Hibernate Validator.
