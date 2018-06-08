@@ -28,8 +28,7 @@ As part of Hibernate Validator, this application implements
  
 As part of Hibernate ORM
   - Usage of Entity , ID annotations
-  - Usage of Mapping annotations
-  - used only unidirectional Many to One mapping
+  - Usage of Mapping annotations, used only unidirectional Many to One mapping
   - Usage of Query and Param annotations while using JPQL 
   - Usage of Transactional annotations while deleteby pattern methods <br>
   
