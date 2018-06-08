@@ -16,13 +16,16 @@ As part of Spring MVC , this application implements
  - Front End Forms to Back End DataBinding
  - Autowiring of required objects
  - Redirection from one controller to another using flashattributes<br>
+ 
 As part of Hibernate Validator, this application implements
  - Null check , length check using annotations
  - Cross field verification using class level user defined annotations
  - Usage Valid and bindingresult annotation in controller classes<br>
+ 
  As part of Spring Data JPA 
  - Usage of CRUD repository 
  - Usage of findBy and delet methods using different name patterns<br>
+ 
 As part of Hibernate ORM
   - Usage of Entity , ID annotations
   - Usage of Mapping annotations
