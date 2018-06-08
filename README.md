@@ -1,14 +1,14 @@
 # Spring-boot-Contact
 A Simple Contact management Application implemented using Spring Boot &amp; Spring Data JPA 
 
-This Appication is built for learning Spring boot , Hibernate with Spring Data JPA , Hibernate Validator.
+This Application is built for learning Spring boot , Hibernate with Spring Data JPA , Hibernate Validator.
 
 It uses only three tables 
 
 User          - to manage login <br>
 Contact       - to Store User's contact information like name , Email id (Like Contacts in Phone) 
                 and it has unidirectional many to one mapping with User .<br>
-ContactPhone  - to Store Phone numbers(yes! can store more phone number for each contcat) information for 
+ContactPhone  - to Store Phone numbers(yes! can store more phone number for each contact) information for 
                  each contact and it has unidirectional many to one mapping with Contact.<br>
 <br>               
 As part of Spring MVC , this application implements
