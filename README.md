@@ -39,10 +39,10 @@ As part of Hibernate ORM
  
  References:
  
- https://stackoverflow.com/questions/44170533/spring-data-jpa-how-to-enable-cascading-delete-without-a-reference-to-the-child
- https://stackoverflow.com/questions/48610226/how-to-construct-spring-jpa-jpql-query-in-jparepository
- https://stackoverflow.com/questions/32741333/session-management-in-microservices
- https://stackoverflow.com/questions/32269192/spring-no-entitymanager-with-actual-transaction-available-for-current-thread
- https://stackoverflow.com/questions/23862994/what-is-the-difference-between-hibernate-and-spring-data-jpa
- https://stackoverflow.com/questions/23700540/cross-cutting-concern-example
+ https://stackoverflow.com/questions/44170533/spring-data-jpa-how-to-enable-cascading-delete-without-a-reference-to-the-child <br>
+ https://stackoverflow.com/questions/48610226/how-to-construct-spring-jpa-jpql-query-in-jparepository <br>
+ https://stackoverflow.com/questions/32741333/session-management-in-microservices <br>
+ https://stackoverflow.com/questions/32269192/spring-no-entitymanager-with-actual-transaction-available-for-current-thread <br>
+ https://stackoverflow.com/questions/23862994/what-is-the-difference-between-hibernate-and-spring-data-jpa <br>
+ https://stackoverflow.com/questions/23700540/cross-cutting-concern-example <br>
  
