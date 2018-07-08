@@ -24,7 +24,7 @@ As part of Hibernate Validator, this application implements
  
  As part of Spring Data JPA 
  - Usage of CRUD repository 
- - Usage of findBy and delet methods using different name patterns<br>
+ - Usage of findBy and delete methods using different name patterns<br>
  
 As part of Hibernate ORM
   - Usage of Entity , ID annotations
