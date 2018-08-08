@@ -39,6 +39,13 @@ As part of Hibernate ORM
  - Hibernate - Fetch Type 
  - Spring Session using Redis Db for clustered session management
  
+Updates:
+In order to have easy development , created branch h2_database which uses in memory h2 database .
+
+h2-database & aop-brach has following updates
+  - Aspectj is used for implementing cross cutting concern like logging and session checker 
+  - As part of Aspectj , we can learn usage of annotation like Aspect,Point Cut expression,Around & Before advice types. 
+ 
  References:
  
  https://stackoverflow.com/questions/44170533/spring-data-jpa-how-to-enable-cascading-delete-without-a-reference-to-the-child <br>
@@ -47,4 +54,5 @@ As part of Hibernate ORM
  https://stackoverflow.com/questions/32269192/spring-no-entitymanager-with-actual-transaction-available-for-current-thread <br>
  https://stackoverflow.com/questions/23862994/what-is-the-difference-between-hibernate-and-spring-data-jpa <br>
  https://stackoverflow.com/questions/23700540/cross-cutting-concern-example <br>
+ https://dzone.com/articles/implementing-aop-with-spring-boot-and-aspectj <br>
  
