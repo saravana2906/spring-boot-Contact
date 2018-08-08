@@ -37,9 +37,9 @@ As part of Hibernate ORM
  
  - AOP for logging and security session check before accessing crtical controller methods
  - Hibernate - Fetch Type 
- - Spring Session using Redis Db for clustered session management
+ - Spring Session using Redis Db for clustered session management<br>
  
-Updates:
+Updates:<br>
 In order to have easy development , created branch h2_database which uses in memory h2 database .
 
 h2-database & aop-brach has following updates
