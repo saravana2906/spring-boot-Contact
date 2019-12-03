@@ -89,6 +89,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>contact</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
